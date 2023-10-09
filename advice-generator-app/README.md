@@ -36,7 +36,7 @@ Sometimes the advice received from API has words between quotation marks. I made
 .card .advicetext::after {
     display: inline;
     vertical-align: bottom;
-    color: hsl(150, 100%, 66%);;
+    color: hsl(150, 100%, 66%);
     font-size: 2em;
     top: .2em;
     position: relative;
