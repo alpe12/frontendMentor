@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 500px);
+    justify-content: center;
+    gap: 2rem;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.cards .card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid darkgray;
+}
+
+.cards .card .imagelink img {
+    min-height: 250px;
+}
+
+.cards .card .content {
+    margin: 1rem;
+}
+
+.cards .card .content .title {
+    color: black;
+    text-decoration: none;
+}
+
+.cards .card .content .title:hover {
+    text-decoration: underline;
+}
+
+.cards .card .content > .title *,
+.cards .card .content > :not(.title) {
+    margin-bottom: 1rem;
+}
+
+.cards .card .content .tags {
+    font-weight: bold;
+    list-style: none;
+    display: inline-flex;
+    gap: 1.5ch;
+    color: darkslategray;
+}
+
+.cards .card .content .readme {
+    display: block;
+}
+
+.cards .card .content .readme {
+    text-decoration: none;
+}
+
+.cards .card .content .readme:hover {
+    text-decoration: underline;
+}

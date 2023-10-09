@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(218, 23%, 16%);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.card {
+    background-color: hsl(217, 19%, 24%);
+    width: 540px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.card .advicenumber {
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.card .advicetext {
+    color: hsl(193, 38%, 86%);
+    font-size: 28px;
+    text-align: center;
+}
+
+.card .advicetext::before,
+.card .advicetext::after {
+    display: inline;
+    vertical-align: bottom;
+    color: hsl(150, 100%, 66%);;
+    font-size: 2em;
+    top: .2em;
+    position: relative;
+    line-height: 38px;
+}
+.card .advicetext::before {
+    content: open-quote;
+    padding-right: 5px;
+}
+.card .advicetext::after {
+    content: close-quote;
+    padding-left: 5px;
+}
+
+.card .divider {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.card .divider img {
+    width: 100%;
+}
+
+.card .button {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    background-color: hsl(150, 100%, 66%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.card .button:hover,
+.card .button:focus-visible {
+    box-shadow: 0 0 40px hsl(150, 100%, 66%);
+}
+
+.card .button .dice {
+    vertical-align: center;
+    width: 25px;
+    height: 25px;
+}
+
+.card .button .dice.animate {
+    animation: rotate 800ms linear infinite;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.attribution {
+    background-color: hsl(217, 19%, 24%);
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    margin-top: 40px;
+    padding: 0.8em 0;
+}
+.attribution a {
+    color: hsl(150, 100%, 66%);
+}
+
+@media (max-height: 480px) {
+    .attribution {
+        padding: 0.2em 0;
+    }
+}
