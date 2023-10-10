@@ -42,6 +42,13 @@ img {
     background-color: darkgray;
 }
 
+.cards .card .imagelink img {
+    min-height: 200px;
+    transition: scale 200ms ease;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
 @media (hover: hover) {
     .cards .card:hover {
         outline: 2px outset darkgray;
@@ -50,17 +57,9 @@ img {
         padding: 4px;
         padding-bottom: 0;
     }
-}
-
-.cards .card .imagelink img {
-    min-height: 200px;
-    transition: scale 200ms ease;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-}
-
-.cards .card .imagelink img:hover {
-    scale: 1.05;
+    .cards .card .imagelink img:hover {
+        scale: 1.05;
+    }
 }
 
 .cards .card .content {
