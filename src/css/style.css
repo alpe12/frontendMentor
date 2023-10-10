@@ -34,18 +34,22 @@ img {
     outline: 1px solid darkgray;
 }
 
-.cards .card:hover {
-    outline: 2px outset darkgray;
-}
-
 .cards .card .imagelink {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 4px;
-    padding-bottom: 0;
     background-color: darkgray;
+}
+
+@media (hover: hover) {
+    .cards .card:hover {
+        outline: 2px outset darkgray;
+    }
+    .cards .card .imagelink {
+        padding: 4px;
+        padding-bottom: 0;
+    }
 }
 
 .cards .card .imagelink img {
