@@ -31,17 +31,28 @@ img {
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
-    border: 1px solid darkgray;
+    outline: 1px solid darkgray;
+}
+
+.cards .card:hover {
+    outline: 2px outset darkgray;
 }
 
 .cards .card .imagelink {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    padding: 4px;
+    padding-bottom: 0;
+    background-color: darkgray;
 }
 
 .cards .card .imagelink img {
     min-height: 200px;
     transition: scale 200ms ease;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 }
 
 .cards .card .imagelink img:hover {
