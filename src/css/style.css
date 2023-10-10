@@ -5,7 +5,7 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: lightgray;
     display: flex;
     justify-content: center;
@@ -34,8 +34,18 @@ img {
     border: 1px solid darkgray;
 }
 
+.cards .card .imagelink {
+    display: block;
+    overflow: hidden;
+}
+
 .cards .card .imagelink img {
     min-height: 200px;
+    transition: scale 200ms ease;
+}
+
+.cards .card .imagelink img:hover {
+    scale: 1.05;
 }
 
 .cards .card .content {
@@ -74,4 +84,11 @@ img {
 
 .cards .card .content .readme:hover {
     text-decoration: underline;
+}
+
+/* max card size + padding from sides */
+@media (max-width: calc(500px + 4rem)) {
+    .cards {
+        padding: 2%;
+    }
 }
