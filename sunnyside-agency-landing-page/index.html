@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg bg-bottom" style="
+        --bg:url(../images/desktop/image-header.jpg);
+        --bgMobile:url(../images/mobile/image-header.jpg);
+        --bgColor: rgb(62,191,255);
+    ">
+        <div class="top-nav-bar">
+            <img src="./src/images/logo.svg" alt="" class="logo">
+            <input class="hamburger" id="menu-toggle" type="checkbox"/>
+            <label class="hamburger" for="menu-toggle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h1 class="text-border-black">We are creatives</h1>
+            <img src="./src/images/icon-arrow-down.svg" alt="" class="arrow">
+        </div>
+    </header>
+    <main>
+        <div class="gridContent">
+            <div class="transform-text">
+                <h2>Transform your brand</h2>
+                <p>We are a full-service creative agency specializing in helping brands grow fast.
+                    Engage your clients through compelling visuals that do most of the marketing for you.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="bg transform-image" style="
+                --bg:url(../images/desktop/image-transform.jpg);
+                --bgMobile:url(../images/mobile/image-transform.jpg);
+                --bgColor: rgb(255,211,2);
+            "></div>
+            <div class="bg standout-image" style="
+                --bg:url(../images/desktop/image-stand-out.jpg);
+                --bgMobile:url(../images/mobile/image-stand-out.jpg);
+                --bgColor: rgb(254,127,110);
+            "></div>
+            <div class="standout-text">
+                <h2>Stand out to the right audience</h2>
+                <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="bg bg-top graphic-design mixed text-border-white" style="
+                --bg:url(../images/desktop/image-graphic-design.jpg);
+                --bgMobile:url(../images/mobile/image-graphic-design.jpg);
+                --bgColor: rgb(152,216,200);
+            ">
+                <h2>Graphic design</h2>
+                <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+                </p>
+            </div>
+            <div class="bg bg-top photography mixed text-border-white" style="
+                --bg:url(../images/desktop/image-photography.jpg);
+                --bgMobile:url(../images/mobile/image-photography.jpg);
+                --bgColor: rgb(98,204,254);
+            ">
+                <h2>Photography</h2>
+                <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+            </div>
+        </div>
+        <div class="testemonials">
+            <h2 class="title">Client testimonials</h2>
+            <div class="flex">
+                <div class="testemonial">
+                    <img src="./src/images/image-emily.jpg" alt="" class="poster">
+                    <p class="text">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+                    <div>
+                        <p class="name">Emily R.</p>
+                        <p class="position">Marketing Director</p>
+                    </div>
+                </div>
+                <div class="testemonial">
+                    <img src="./src/images/image-thomas.jpg" alt="" class="poster">
+                    <p class="text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                    <div>
+                        <p class="name">Thomas S.</p>
+                        <p class="position">Chief Operating Officer</p>
+                    </div>
+                </div>
+                <div class="testemonial">
+                    <img src="./src/images/image-jennie.jpg" alt="" class="poster">
+                    <p class="text">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                    <div>
+                        <p class="name">Jennie F.</p>
+                        <p class="position">Business Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gridImages">
+            <div class="bg" style="
+                --bg:url(../images/desktop/image-gallery-milkbottles.jpg);
+                --bgMobile:url(../images/mobile/image-gallery-milkbottles.jpg);
+                --bgColor: rgb(64,178,238);
+            "></div>
+            <div class="bg bg-top bg-right" style="
+                --bg:url(../images/desktop/image-gallery-orange.jpg);
+                --bgMobile:url(../images/mobile/image-gallery-orange.jpg);
+                --bgColor: rgb(254,153,0);
+            "></div>
+            <div class="bg bg-bottom" style="
+                --bg:url(../images/desktop/image-gallery-cone.jpg);
+                --bgMobile:url(../images/mobile/image-gallery-cone.jpg);
+                --bgColor: rgb(77,201,253);
+            "></div>
+            <div class="bg" style="
+                --bg:url(../images/desktop/image-gallery-sugarcubes.jpg);
+                --bgMobile:url(../images/mobile/image-gallery-sugarcubes.jpg);
+                --bgColor: rgb(255,124,120);
+            "></div>
+        </div>
+    </main>
+    <footer>
+            <img src="./src/images/logo.svg" alt="" class="logo">
+            <nav class="bottom-nav-bar">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+            </nav>
+            <ul class="social">
+                <li>
+                    <a href="">
+                        <img src="./src/images/icon-facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./src/images/icon-instagram.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./src/images/icon-twitter.svg " alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./src/images/icon-pinterest.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef" target="_blank">Frontend Mentor</a>.</p>
+        <p>Coded by <a href="https://github.com/alpe12">Douglas Pessoa</a>.</p>
+    </div>
+</body>
+
+</html>

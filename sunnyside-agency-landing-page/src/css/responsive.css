@@ -1,0 +1,227 @@
+@media (min-width: 2560px) {
+    main .gridContent {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 800px;
+    }
+
+    main .gridImages {
+        grid-auto-rows: 800px;
+    }
+
+    main .gridContent> :nth-child(1) {
+        order: 1;
+    }
+
+    main .gridContent> :nth-child(2) {
+        order: 2;
+    }
+
+    main .gridContent> :nth-child(3) {
+        order: 4;
+    }
+
+    main .gridContent> :nth-child(4) {
+        order: 5;
+    }
+
+    main .gridContent> :nth-child(5) {
+        order: 3;
+    }
+
+    main .gridContent> :nth-child(6) {
+        order: 6;
+    }
+}
+
+@media (max-width: 640px) {   
+    body .bg {
+        background-image: var(--bgMobile, var(--bg));
+    }
+
+    header {
+        padding: 30px 22px;
+    }
+
+    header .top-nav-bar .logo {
+        height: 24px;
+    }
+
+    header .content {
+        text-align: center;
+    }
+
+    header .content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.18em;
+    }
+
+    main .gridContent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 310px 438px 310px 438px 600px 600px;
+        text-align: center;
+    }
+
+    main .gridContent h2 {
+        font-size: 2rem;
+    }
+
+    main .gridContent > [class$=-text] {
+        padding: 8%;
+        align-items: center;
+    }
+
+    main .gridContent > [class$="-text"] p {
+        font-size: 1.105rem;
+        line-height: 1.7;
+    }
+
+    main .gridContent > [class$="-text"] a {
+        letter-spacing: 0.039em;
+    }
+
+    main .gridContent .transform-image {
+        order: -1;
+    }
+
+    main .gridContent > .mixed {
+        padding-left: 6.4%;
+        padding-right: 6.4%;
+    }
+
+    main .gridContent > .mixed h2 {
+        letter-spacing: 0.015em;
+    }
+
+    main .gridContent > .mixed p {
+        letter-spacing: -0.005em;
+    }
+
+    main .testemonials {
+        height: auto;
+        padding: clamp(38px, 10.134%, 200px);
+        gap: 64px;
+    }
+
+    main .testemonials .title {
+        font-size: 1rem;
+        letter-spacing: 0.255em;
+    }
+
+    main .testemonials .flex {
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    main .testemonials .flex .testemonial {
+        gap: 40px;
+    }
+
+    main .testemonials .flex .testemonial .text {
+        letter-spacing: -0.012em;
+        line-height: 1.7;
+    }
+
+    main .gridImages {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    header .top-nav-bar {
+        margin-right: 4px;
+        position: relative;
+    }
+
+    header .top-nav-bar label.hamburger {
+        width: 24px;
+        height: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    header .top-nav-bar label.hamburger .line {
+        width: 100%;
+        height: 3px;
+        background-color: #FFF;
+        transition: transform 0.1s ease;
+    }
+
+    header .top-nav-bar label.hamburger:hover .line {
+        opacity: 0.7;
+    }
+
+    header .top-nav-bar #menu-toggle:checked~label.hamburger .line {
+        transition-duration: 0.3s;
+    }
+
+    header .top-nav-bar #menu-toggle:checked~label.hamburger .line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    header .top-nav-bar #menu-toggle:checked~label.hamburger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    header .top-nav-bar #menu-toggle:checked~label.hamburger .line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    header .top-nav-bar nav {
+        display: none;
+    }
+
+    header .top-nav-bar #menu-toggle:checked~nav {
+        width: clamp(150px, calc(100% - 4px), 328px);
+        height: 304px;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        top: calc(200% + 24px);
+        background-color: rgb(255,251,248);
+        padding-top: 8px;
+        color: rgb(133,133,133);
+        justify-content: space-evenly;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+
+    header .top-nav-bar #menu-toggle:checked~nav::before {
+        content: '';
+        position: absolute;
+        height: 24px;
+        aspect-ratio: 1;
+        top: -24px;
+        right: 0;
+        border-top: 24px solid transparent;
+        border-right: 24px solid rgb(255,251,248);
+    }
+
+    header .top-nav-bar nav> :last-child {
+        border-radius: 2em;
+        background-color: rgb(250, 212, 0);
+    }
+
+    footer .logo {
+        height: 34px;
+    }
+
+    footer .bottom-nav-bar {
+        letter-spacing: -0.01em;
+    }
+
+    .attribution {
+        padding: 0.2em 0;
+    }
+
+    .attribution p {
+        display: block;
+    }
+}
+
+@media (max-width: 440px) {
+    main .gridImages {
+        grid-auto-rows: 190px;
+    }
+}

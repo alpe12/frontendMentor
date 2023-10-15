@@ -1,0 +1,348 @@
+html {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+body {
+    background-color: rgb(255,251,248);
+}
+
+body .bg {
+    background-color: var(--bgColor);
+    background-image: var(--bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body .bg.bg-bottom {
+    background-position-y: bottom;
+}
+
+body .bg.bg-top {
+    background-position-y: top;
+}
+
+body .bg.bg-left {
+    background-position-x: left;
+}
+
+body .bg.bg-right {
+    background-position-x: right;
+}
+
+body .text-border-black,
+body .text-border-white * {
+    text-shadow: 1px 0 var(--text-border-color), -1px 0 var(--text-border-color), 0 1px var(--text-border-color), 0 -1px var(--text-border-color), 1px 1px var(--text-border-color), -1px -1px var(--text-border-color), 1px -1px var(--text-border-color), -1px 1px var(--text-border-color);
+}
+
+body .text-border-black {
+    --text-border-color: rgba(0, 0, 0, 0.3);
+}
+
+body .text-border-white {
+    --text-border-color: rgba(255, 255, 255, 0.8);
+}
+
+header .top-nav-bar nav > :last-child,
+main .gridContent a,
+main .testemonials .flex .testemonial .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+header {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 40px;
+    overflow-y: hidden;
+}
+
+header .top-nav-bar {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 8px;
+    justify-content: space-between;
+}
+
+header .top-nav-bar .logo,
+footer .logo {
+    height: 38px;
+}
+
+header .top-nav-bar .hamburger {
+    display: none;
+}
+
+header .top-nav-bar nav {
+    display: flex;
+    gap: clamp(10px, 4.15%, 48px);
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+header .top-nav-bar nav > :last-child {
+    background-color: rgba(255,255,255,var(--opacity, 1));
+    color: rgb(35, 48, 62);
+    padding: 18px 30px;
+    border-radius: 26px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: -0.03em;
+}
+
+header .top-nav-bar nav > :not(:last-child):hover {
+    text-decoration: underline;
+}
+
+header .top-nav-bar nav > :last-child:hover {
+    --opacity: 0.25;
+    color: white;
+}
+
+header .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    color: white;
+}
+header .content h1 {
+    font-size: 3rem;
+}
+
+header .content .arrow {
+    animation: moveUpDown 1.2s infinite ease;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.85;
+    }
+}
+
+main .gridContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 600px;
+}
+
+main .gridContent h2 {
+    font-size: 2.5rem;
+}
+
+main .gridContent > [class$=-text] {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(50px, 22%, 165px);
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+main .gridContent > [class$=-text] p {
+    color: rgb(120, 118, 129);
+}
+
+main .gridContent > .mixed {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 26%;
+    gap: 30px;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+main .gridContent > .mixed h2 {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+main .gridContent > [class$=-text] a {
+    position:relative;
+    padding: 0 8px;
+    text-transform: uppercase;
+}
+
+main .gridContent > [class$=-text] a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 0.8em;
+    top: 0.8em;
+    height: 0.5em;
+    transition: background-color 200ms ease;
+}
+
+main .gridContent > [class$=-text] a:hover {
+    --opacity: 1;
+}
+
+main .gridContent > .transform-text a::after {
+    background-color: rgba(250,212,0 ,var(--opacity, 0.35));
+}
+
+main .gridContent > .standout-text a::after {
+    background-color: rgba(254,120,103,var(--opacity, 0.35));
+}
+
+main .gridContent .graphic-design {
+    color: rgb(37, 86, 75);
+}
+
+main .gridContent .photography {
+    color: rgb(25, 83, 107);
+}
+
+main .testemonials {
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(60px, 11.4%, 200px);
+    gap: 70px;
+}
+
+main .testemonials .title {
+    align-self: center;
+    text-transform: uppercase;
+    color: rgb(167, 171, 174);
+    letter-spacing: 0.3em;
+    font-size: 1.25rem;
+}
+
+main .testemonials .flex {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: clamp(30px, 3.8%, 60px);
+}
+
+main .testemonials .flex .testemonial {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .testemonials .flex .testemonial .poster {
+    border-radius: 50%;
+    width: 74px;
+    transition: border-radius 300ms ease;
+}
+
+main .testemonials .flex .testemonial .poster:hover {
+    border-radius: 25%;
+}
+
+main .testemonials .flex .testemonial .text {
+    color: rgb(90, 99, 108);
+    text-align: center;
+    font-size: 1.14rem;
+}
+
+main .testemonials .flex .testemonial > div {
+    text-align: center;
+}
+
+main .testemonials .flex .testemonial .name {
+    color: rgb(35, 48, 62);
+    font-size: 1.14rem;
+}
+
+main .testemonials .flex .testemonial .position {
+    color: rgb(167, 171, 174);
+    font-size: 0.86rem;
+    margin-top: 10px;
+}
+
+main .gridImages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 448px;
+}
+
+footer {
+    height: 350px;
+    background-color: rgb(144,212,197);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(69, 140, 126);
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .logo {
+    filter: invert(1) invert(39%) sepia(47%) saturate(460%) hue-rotate(116deg) brightness(90%) contrast(91%);
+}
+
+footer .bottom-nav-bar {
+    display: flex;
+    gap: 58px;
+    font-size: 1.12rem;
+}
+
+footer .social {
+    display: flex;
+    gap: 28px;
+}
+
+footer .social a img {
+    filter: invert(41%) sepia(8%) saturate(2409%) hue-rotate(118deg) brightness(92%) contrast(96%);
+}
+
+footer .social a:hover img {
+    filter: invert(1);
+}
+
+.attribution {
+    background-color: rgb(117, 164, 182);
+    color: hsl(228, 45%, 44%);
+    text-align: center;
+    padding: 0.4em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution p {
+    display: inline-block;
+}
+
+.attribution a {
+    color: hsl(228, 82%, 51%);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}

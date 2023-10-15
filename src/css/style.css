@@ -32,6 +32,9 @@ img {
     border-radius: 1rem;
     overflow: hidden;
     outline: 1px solid darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cards .card .imagelink {
@@ -76,7 +79,7 @@ img {
 }
 
 .cards .card .content > .title *,
-.cards .card .content > :not(.title) {
+.cards .card .content > :not(.title):not(:last-child) {
     margin-bottom: 1rem;
 }
 
