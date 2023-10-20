@@ -95,7 +95,7 @@ body .text-border-black {
     --text-border-color: rgba(0, 0, 0, 0.3);
 }
 body .text-border-white {
-    --text-border-color: rgba(255, 255, 255, 0.8);
+    --text-border-color: rgba(255, 255, 255, 0.4);
 }
 ```
 

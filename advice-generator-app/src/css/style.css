@@ -123,6 +123,9 @@ main {
     margin-top: 40px;
     padding: 0.8em 0;
 }
+.attribution p {
+    display: inline-block;
+}
 .attribution a {
     color: hsl(150, 100%, 66%);
 }

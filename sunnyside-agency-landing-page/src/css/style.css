@@ -41,6 +41,8 @@ body .bg.bg-right {
 }
 
 body .text-border-black,
+body .text-border-black *,
+body .text-border-white,
 body .text-border-white * {
     text-shadow: 1px 0 var(--text-border-color), -1px 0 var(--text-border-color), 0 1px var(--text-border-color), 0 -1px var(--text-border-color), 1px 1px var(--text-border-color), -1px -1px var(--text-border-color), 1px -1px var(--text-border-color), -1px 1px var(--text-border-color);
 }
@@ -50,7 +52,7 @@ body .text-border-black {
 }
 
 body .text-border-white {
-    --text-border-color: rgba(255, 255, 255, 0.8);
+    --text-border-color: rgba(255, 255, 255, 0.4);
 }
 
 header .top-nav-bar nav > :last-child,
