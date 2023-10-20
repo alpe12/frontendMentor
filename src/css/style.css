@@ -135,6 +135,10 @@ img {
     .cards .card .content {
         justify-content: space-between;
     }
+    .cards .card .content .tags {
+        flex: 1;
+        align-content: flex-start;
+    }
 }
 
 /* max card size + padding from sides */
