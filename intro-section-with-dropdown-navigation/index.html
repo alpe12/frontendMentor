@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor - Intro section with dropdown navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./src/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="./src/images/logo.svg" alt="">
+        <input class="hamburger" id="menu-toggle" type="checkbox"/>
+        <label class="hamburger" for="menu-toggle">
+            <img src="./src/images/icon-menu.svg" alt="">
+            <img src="./src/images/icon-close-menu.svg" alt="">
+        </label>
+        <div class="menus">
+            <ul class="left-menu">
+                <li>
+                    <input id="features-menu-toggle" type="checkbox">
+                    <label for="features-menu-toggle">Features</label>
+                    <ul class="menu-expand">
+                        <li>
+                            <a href="">
+                                <img src="./src/images/icon-todo.svg" alt="">
+                                Todo List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./src/images/icon-calendar.svg" alt="">
+                                Calendar
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./src/images/icon-reminders.svg" alt="">
+                                Reminders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./src/images/icon-planning.svg" alt="">
+                                Planning
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <input id="company-menu-toggle" type="checkbox">
+                    <label for="company-menu-toggle">Company</label>
+                    <ul class="menu-expand">
+                        <li><a href="">History</a></li>
+                        <li><a href="">Our Team</a></li>
+                        <li><a href="">Blog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Careers</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+            </ul>
+            <ul class="right-menu">
+                <li><a href="" class="login">Login</a></li>
+                <li><a href="" class="register">Register</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <div class="top">
+                <h1>Make remote work</h1>
+                <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <a href="">Learn more</a>
+            </div>
+            <ul class="bottom">
+                <li>
+                    <img src="./src/images/client-databiz.svg" alt="">
+                </li>
+                <li>
+                    <img src="./src/images/client-audiophile.svg" alt="">
+                </li>
+                <li>
+                    <img src="./src/images/client-meet.svg" alt="">
+                </li>
+                <li>
+                    <img src="./src/images/client-maker.svg" alt="">
+                </li>
+            </ul>
+        </div>
+        <picture class="right">
+            <source media="(max-width: 780px)" srcset="./src/images/image-hero-mobile.png">
+            <img src="./src/images/image-hero-desktop.png" alt="">
+        </picture>
+    </main>
+    <div class="attribution">
+        <p>Challenge by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>.</p>
+        <p>Coded by <a href="https://github.com/alpe12">Douglas Pessoa</a>.</p>
+    </div>
+</body>
+</html>
