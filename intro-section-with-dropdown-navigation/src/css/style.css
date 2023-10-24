@@ -87,6 +87,7 @@ header .left-menu li label::after {
 header .left-menu li {
     position: relative;
     white-space: nowrap;
+    width: max-content;
 }
 
 header .left-menu li .menu-expand {
