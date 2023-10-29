@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--soft-red);
+}
+
+:root {
+    --soft-orange: hsl(35, 77%, 62%); /* #e67e5c (RGB: 230, 126, 92) */
+    --soft-red: hsl(5, 85%, 63%); /* #e05051 (RGB: 224, 80, 81) */
+    --off-white: hsl(36, 100%, 99%); /* #fefefe (RGB: 254, 254, 254) */
+    --grayish-blue: hsl(233, 8%, 79%); /* #ced1cb (RGB: 206, 209, 203) */
+    --dark-grayish-blue: hsl(236, 13%, 42%); /* #6b7270 (RGB: 107, 114, 112) */
+    --very-dark-blue: hsl(240, 100%, 5%); /* #0d0d0d (RGB: 13, 13, 13) */
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background: var(--off-white);
+}
+
+body {
+    /*
+        At 681px of page width padding is "22.5px 40px".
+        At 1440px of page width padding is "90px 165px".
+        At any width between these, the padding value is scaled.
+    */
+    --min-width: 681;
+    --max-width: 1440;
+    --min-padding-vertical: 22.5;
+    --max-padding-vertical: 90;
+    --min-padding-horizontal: 40;
+    --max-padding-horizontal: 165;
+    padding: 
+        clamp(
+            var(--min-padding-vertical)*1px,
+            calc(var(--min-padding-vertical)*1px + (var(--max-padding-vertical) - var(--min-padding-vertical)) * ((100vw - var(--min-width)*1px) / (var(--max-width) - var(--min-width)))),
+            var(--max-padding-vertical)*1px
+        )
+        clamp(
+            var(--min-padding-horizontal)*1px,
+            calc(var(--min-padding-horizontal)*1px + (var(--max-padding-horizontal) - var(--min-padding-horizontal)) * ((100vw - var(--min-width)*1px) / (var(--max-width) - var(--min-width)))),
+            var(--max-padding-horizontal)*1px
+        );
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.08rem;
+}
+
+header .hamburger {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr; */
+    margin-top: 3.6rem;
+    gap: 2rem;
+}
+
+main .web3 {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem 2rem;
+}
+
+main .web3 picture {
+    grid-column: span 2;
+}
+
+main .web3 h1 {
+    font-size: 3.8rem;
+    line-height: 0.96;
+    align-self: center;
+    font-weight: 800;
+}
+
+main .web3 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+main .web3 .content p {
+    line-height: 1.55;
+}
+
+main .web3 .content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 185px;
+    height: 50px;
+    background-color: var(--soft-red);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: bold;
+    color: var(--off-white);
+}
+
+main .web3 .content a:hover {
+    background-color: var(--very-dark-blue);
+}
+
+main .new {
+    grid-row: span 2;
+    background-color: var(--very-dark-blue);
+    color: var(--grayish-blue);
+    padding: 1.9rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+main .new h2 {
+    color: var(--soft-orange);
+    font-size: 2.65rem;
+}
+
+main .new .articles {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+main .new .articles a:hover {
+    color: var(--soft-orange);
+}
+
+main .new .articles article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+main .new .articles article h3 {
+    color: var(--off-white);
+    letter-spacing: 0.02em;
+    font-size: 1.3rem;
+}
+
+main .new .articles article p {
+    letter-spacing: 0.0022em;
+    line-height: 1.6;
+}
+
+main .new article + article {
+    border-top: 1px solid var(--dark-grayish-blue);
+    padding-top: 9.935%;
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 3;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+main .cards article {
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+main .cards article img {
+    max-height: 127px;
+}
+
+main .cards article .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .cards article .content .count {
+    font-size: 2rem;
+    color: var(--grayish-blue);
+    font-weight: 800;
+}
+
+main .cards article .content h4 {
+    font-size: 1.22rem;
+}
+
+main .cards article .content p {
+    line-height: 1.62;
+}
+
+main {
+    margin-bottom: 1.5rem;
+}
+.attribution {
+    background-color: var(--dark-grayish-blue);
+    color: var(--off-white);
+    text-align: center;
+    padding: 0.4em 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.9rem;
+    z-index: 4;
+}
+.attribution p {
+    display: inline-block;
+}
+.attribution a {
+    color: var(--soft-orange);
+}
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (min-width: 2560px) {
+    html {
+        display: flex;
+        justify-content: center;
+    }
+    body {
+        max-width: 2560px;
+    }
+}
+@media (max-width: 1279px) and (min-width: 681px){
+    main .web3 .content {
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+    main .web3 h1,
+    main .web3 .content {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1080px) and (min-width: 681px){
+    main .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        padding: 1.8rem 1rem;
+        position: relative;
+    }
+    header img {
+        height: 30px;
+    }
+    header label.hamburger {
+        width: 40px;
+        height: 31px;
+        display: flex;
+        z-index: 1;
+    }
+    header label.hamburger .close {
+        display: none;
+    }
+    
+    header input.hamburger:checked ~ label.hamburger .open {
+        display: none;
+    }
+    
+    header input.hamburger:checked ~ label.hamburger .close {
+        display: initial;
+    }
+    
+    header nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 0 0 0 max(100vh, 100vw) rgba(0, 0, 0, 0.4);
+        background-color: var(--off-white);
+        padding: 146px 25px;
+        width: 256px;
+        font-size: 1.2rem;
+        height: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    header input.hamburger:checked ~ nav {
+        display: initial;
+    }
+
+    main {
+        margin-top: 2rem;
+        gap: 4.2rem;
+    }
+    main .web3,
+    main .web3 picture,
+    main .web3 h1,
+    main .web3 .content,
+    main .new,
+    main .cards {
+        grid-column: 1 / -1;
+    }
+    main .web3 {
+        gap: 1rem;
+    }
+    main .web3 h1 {
+        font-size: 2.7rem;
+        line-height: 1.02;
+    }
+    main .web3 .content {
+        gap: 1.5rem;
+    }
+    main .web3 .content p {
+        line-height: 1.75;
+    }
+    main .new {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+    main .new h2 {
+        font-size: 2.05rem;
+    }
+    main .cards {
+        grid-template-columns: unset;
+        margin-top: 0.3rem;
+        gap: 2.3rem;
+    }
+}

@@ -1,6 +1,6 @@
-const menus_input = [...document.querySelectorAll('.menu-expand')].map(el => el.parentElement).map(el => el.querySelector('input[id$=-menu-toggle]'));
+const menus_input = [...document.querySelectorAll('header .menus .menu-expand')].map(el => el.parentElement).map(el => el.querySelector('input[id$=-menu-toggle]'));
 
-function closeOthers(el){
+function closeInactive(el){
     if (document.querySelector('header label.hamburger').getBoundingClientRect().width > 0){
         const hamburger = document.querySelector('header input.hamburger');
         if (hamburger.checked && (el.target.closest('header') === null || el.target === document.querySelector('header > :first-child'))){
@@ -23,4 +23,4 @@ function closeOthers(el){
     }
 }
 
-document.addEventListener('click', closeOthers);
+document.addEventListener('click', closeInactive);
