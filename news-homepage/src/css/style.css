@@ -194,8 +194,8 @@ main .cards {
 main .cards article {
     display: flex;
     gap: 1.5rem;
+    counter-increment: cardscount 1;
 }
-
 
 main .cards article img {
     max-height: 127px;
@@ -207,7 +207,8 @@ main .cards article .content {
     justify-content: space-between;
 }
 
-main .cards article .content .count {
+main .cards article .content .count::before {
+    content: counter(cardscount, decimal-leading-zero);
     font-size: 2rem;
     color: var(--grayish-blue);
     font-weight: 800;

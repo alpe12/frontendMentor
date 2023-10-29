@@ -57,4 +57,16 @@ padding:
     );
 ```
 
+Learned how to add a counter with css.
+
+```css
+main .cards article {
+    counter-increment: cardscount 1;
+}
+
+main .cards article .content .count::before {
+    content: counter(cardscount, decimal-leading-zero);
+}
+```
+
 Also learned more about how to use grid. Still a lot to learn though.
